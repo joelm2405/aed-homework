@@ -22,6 +22,14 @@ TEST(HW5Tests, test1) {
 TEST(HW5Tests, test2) {
   std::vector<std::vector<int>> g{{1,2,3},{},{},{}};
 
+ // Agregar impresión de los resultados para depurar
+  std::cout << "Número de vértices: " << n_vertices(g) << std::endl;
+  std::cout << "Número de aristas: " << n_edges(g) << std::endl;
+  std::cout << "Número de componentes conexos: " << n_connected_components(g) << std::endl;
+
+
+
+
   ASSERT_TRUE(n_vertices(g) == 4);
   ASSERT_TRUE(n_edges(g) == 3);
   ASSERT_TRUE(n_connected_components(g) == 1);

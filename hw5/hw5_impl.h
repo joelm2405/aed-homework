@@ -20,10 +20,11 @@ int n_vertices(std::vector<std::vector<int>> const& graph) {
 int n_edges(std::vector<std::vector<int>> const& graph) {
   int edges = 0;
   for (const auto& adj_list : graph) {
-    edges += adj_list.size(); 
+    edges += adj_list.size();
   }
-  return edges / 2; 
+  return edges / 2;
 }
+
 
 std::vector<int> BFS(std::vector<std::vector<int>> const& graph, int from) {
   std::vector<bool> visited(graph.size(), false);
